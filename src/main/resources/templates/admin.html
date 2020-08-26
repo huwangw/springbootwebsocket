@@ -134,12 +134,11 @@
 
        function connect(){
                if ('WebSocket' in window){
-                   //ws = new WebSocket("ws://www.isuyu.cn:8086/socketServer/niezhiliang9595");
-                   ws = new WebSocket("ws://127.0.0.1:8086/socketServer/niezhiliang9595");
+                   // 进行webSocket连接, 路径与后端的server对应
+                   ws = new WebSocket("ws://127.0.0.1:8086/socketServer/Admin9527");
                }
                else if ('MozWebSocket' in window){
-                   //ws = new MozWebSocket("ws://www.isuyu.cn:8086/socketServer/niezhiliang9595");
-                   ws = new MozWebSocket("ws://127.0.0.1:8086/socketServer/niezhiliang9595");
+                   ws = new MozWebSocket("ws://127.0.0.1:8086/socketServer/Admin9527");
                }
                else{
                    alert("该浏览器不支持websocket");
