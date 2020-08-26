@@ -13,6 +13,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+// 这里的路径是前端用来连接socket是需要用到的
 @ServerEndpoint(value = "/socketServer/{userName}")
 @Component
 public class SocketServer {
@@ -36,7 +37,7 @@ public class SocketServer {
 	 * 服务端的userName,因为用的是set，每个客户端的username必须不一样，否则会被覆盖。
 	 * 要想完成ui界面聊天的功能，服务端也需要作为客户端来接收后台推送用户发送的信息
 	 */
-	private final static String SYS_USERNAME = "niezhiliang9595";
+	private final static String SYS_USERNAME = "Admin9527";
 
 
 	/**
@@ -60,7 +61,7 @@ public class SocketServer {
 	/**
 	 *
 	 * 收到客户端发送信息时触发
-	 * 我们将其推送给客户端(niezhiliang9595)
+	 * 我们将其推送给客户端(Admin9527)
 	 * 其实也就是服务端本身，为了达到前端聊天效果才这么做的
 	 *
 	 * @param message
